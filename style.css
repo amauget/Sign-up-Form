@@ -1,182 +1,271 @@
 /* https://www.dafont.com/info-story.font/* @font-face { */
 
-@font-face {
-    font-family: "infoStory";
-    src: url('externalContent/InfoStory.ttf');
-}
-@font-face {
-    font-family:"StrangeDreams";
-    src: url("externalContent/StrangeDreams.ttf")
-}
-@font-face {
-    font-family: "norse-bold";
-    src: url('externalContent/Norse-Bold.otf');
-}  
 
-:root{
-    font-size: 12px;
-    font-family:'infoStory';
-    margin:0;
-    padding:0px;
-    box-sizing: border-box;
-    height: 100%;
-    width:100%;
-    /* background: black; */
-    
-
-}
-body{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position:relative;
-    background: linear-gradient(to left, rgb(211, 211, 178), white)    ;
-
-}
-
-.header{
-    margin:0;
-    padding-top:10%;
-    height:auto;
-    width:100vw;
-    color:rgba(255, 255, 255, 0.692);
-    font-size: 1.3rem;
-    background: rgb(107, 107, 107);
-    box-shadow: inset .5em -1em 3em rgb(0, 0, 0);
-    
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000; /* High z-index to ensure it stays on top */
-    top:0;
-
-}
-.quoteName{
-    margin-top:10px;
-
-
-}
-.know{
-    margin-top:5px;
-}
-.notHeader{
-    display:flex;
-    position:fixed;
-    bottom:5%;
-    height:80vh;
-    width:100vw;
-
-    
-}
-.signup{
-    font-size: x-large;
-    padding-top:2rem;
-}
-.left{
-    background-image: url("https://img.freepik.com/free-photo/view-singular-chess-piece_23-2150828939.jpg?t=st=1712938739~exp=1712942339~hmac=e9f014b32c31059c9364ebe6cff681499b7365e3671f135d11b9ccf1c4228463&w=740");
-    background-size:35vh;
-    background-position-x: center;
-    background-position-y: 14vh;
-    background-repeat: no-repeat;
-    background-color: black;
-    height:100vh;
-    width:45vw;
-    padding-top: 10vh;
-    position:absolute;
-    left:0;
-   
-   
-
-    
-}
-.right{
-    
-    padding-bottom:15%;
-    height:auto;
-    width:50vw;
-    /* padding-right: 5%; */
-    /* background-color: rgba(255, 255, 255, 0); */
-    position:fixed;
-    right:0;
-    bottom: 0%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    background:rgba(95, 158, 160, 0)
-
-}
-
-p{
-    margin-top:-2vh;
-    width:70vw;
-}
-
-.footer{
-    background:rgb(51, 1, 1);
-    height:5vh;
-    width:100%;
-    position:fixed;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    color:white;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-    gap:50%;
-    font-family: "norse-bold";
-    
-}
-.odin{
-    height:3vh;
-    width:auto;
-}
-
-
-.name, .contact, .password{
-    display:flex; 
-    flex-direction: column;
-    gap:.5vh;
-    margin-top:3vh;
-    padding-left: .5vw;
-    font-weight:bold;
-}
-.input{
-    display:flex;
-    flex-direction: column;
-
-}
-input{
-    width:30vw;
-    font-family:"infoStory" ;
-}
-input[name="email"]{
-    width:35vw;
-}
-
-button{
-    margin-top: 10%;
-    height: 30px;
-    width: 90px;
-    border: rgb(0, 0, 0) solid .25rem;
-    color: white;
-    border-radius: 10%/20%;
-    background-color: rgb(138, 118, 6);
-    box-shadow:inset 0em 1em 1.5em black;
-    margin-top: 20%;
-}
-button:hover{
-    background-color:  rgb(85, 73, 4);
-    cursor: pointer;
-}
-button:active{
-    background-color: rgba(138, 118, 6, 0.452);
-
-}
-
-@media only screen and (min-width: 700px) { /* CREATES DESKTOP LAYOUT BY ACCOUNTING FOR ELEMENTS THAT WILL CHANGE */
-  
+    @font-face {
+        font-family: "infoStory";
+        src: url('externalContent/InfoStory.ttf');
     }
+    @font-face {
+        font-family:"StrangeDreams";
+        src: url("externalContent/StrangeDreams.ttf")
+    }
+    @font-face {
+        font-family: "norse-bold";
+        src: url('externalContent/Norse-Bold.otf');
+    }  
+    
+    :root{
+        font-size: 12px;
+        font-family:'infoStory';
+        margin:0;
+        padding:0px;
+        box-sizing: border-box;
+        height: 100vh;
+        width:100vw;
+        /* background: black; */
+        
+    
+    }
+    body{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        position:relative;
+        background: linear-gradient(to left, rgb(211, 211, 178), white)    ;
+    
+    }
+    
+    .header{
+        color:rgba(255, 255, 255, 0.692);
+        background: rgb(107, 107, 107);
+        box-shadow: inset .5em -1em 3em rgb(0, 0, 0);
+        width:100vw;
+        padding-top:8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: -2%;
+        flex:1;
+
+    }
+    .quoteName{
+        margin-top:10px;
+    
+    
+    }
+    .know{
+        margin-top:5px;
+    }
+    .notHeader{
+        display:flex;
+        flex:1;
+        width:100vw;
+    }
+    .signup{
+        font-size: x-large;
+        
+    }
+    .left{
+        background-image: url("https://img.freepik.com/free-photo/view-singular-chess-piece_23-2150828939.jpg?t=st=1712938739~exp=1712942339~hmac=e9f014b32c31059c9364ebe6cff681499b7365e3671f135d11b9ccf1c4228463&w=740");
+        background-size:35vh;
+        background-position-x: center;
+        background-position-y: 10vh;
+        background-repeat: no-repeat;
+        background-color: black;
+        
+        height:80vh;
+        width:45vw;
+        padding-top: 10vh;
+        position:static;
+        padding-left:10%;
+        margin-left:-10%; 
+           
+    }
+    .right{
+        
+        padding-left:10%;
+        padding-top:5%;
+        background:rgba(95, 158, 160, 0)
+    
+    }
+    
+    p{
+        margin-top:-2vh;
+        width:70vw;
+    }
+    
+    .footer{
+        background:rgb(51, 1, 1);
+        color:white;
+        
+
+        width:100vw;
+        position:absolute;
+        bottom:0px;
+        left:0px;
+        margin-left:-10%;
+        padding-left:10%;
+        /* right:0px; */
+        
+        
+        display:flex;
+        align-items: center;
+        justify-content:center;
+        gap:50%;
+        
+        font-family: "norse-bold";
+    
+        
+    }
+    .odin{
+        height:2rem;
+        width:auto;
+        
+    }
+    
+    
+    .name, .contact, .password{
+        display:flex; 
+        flex-direction: column;
+        gap:.5vh;
+        margin-top:3vh;
+        padding-left: .5vw;
+        font-weight:bold;
+    }
+    .input{
+        display:flex;
+        flex-direction: column;
+    
+    }
+    input{
+        width:30vw;
+        font-family:"infoStory" ;
+    }
+    input[name="email"]{
+        width:35vw;
+    }
+    
+    button{
+        margin-top: 10%;
+        margin-bottom:20%;
+        height: 30px;
+        width: 90px;
+        border: rgb(0, 0, 0) solid .25rem;
+        color: white;
+        border-radius: 10%/20%;
+        background-color: rgb(138, 118, 6);
+        box-shadow:inset 0em 1em 1.5em black;
+        
+
+    }
+    button:hover{
+        background-color:  rgb(85, 73, 4);
+        cursor: pointer;
+    }
+    button:active{
+        background-color: rgba(138, 118, 6, 0.452);
+    
+    }
+/* CREATES DESKTOP LAYOUT BY ACCOUNTING FOR ELEMENTS THAT WILL CHANGE */
+    @media only screen and (min-width:1600px) { 
+      body,.header,.notHeader,.left,.right{
+        margin:0;
+        padding:0;
+      }
+      body{
+        align-items: center;
+        float:right;
+        margin-right:1%;
+      }
+      
+      .header{
+        padding-top:5%;
+        padding-right:5%;
+        margin-right:-5%;
+
+        width:55vw;
+        
+
+        text-align: center;
+        align-items: center;
+
+       
+      }
+      .notHeader{
+        width:50vw;
+        display:flex;
+        flex-direction: column;
+        
+      }
+      p{
+        width:45%;
+        font-size:1.6rem;
+        padding-left:5vw;
+      }
+      .know{
+        padding-left:5vw;
+        font-size: 2rem;
+      }
+      .left{
+        height: 100vh;
+        width:45vw;
+        position: fixed;
+        left:0;
+        top:0;
+
+        background-color:black;
+        background-size: 55vh;
+        background-position-y: 4vh;
+        }
+    .right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 5vw;
+        padding-left:10vw;
+
+    }
+    input{
+        margin-right:20%;
+    
+    }
+    label{
+        font-size: 2rem;
+    }
+    .signup{
+        font-size:3rem;
+    }
+     
+        
+    button{
+        margin-top:45px;
+        
+        height: 40px;
+        width: 120px;
+        font-size:20px;
+        
+    }   
+    .name,.contact,.password{
+        flex-direction: row;
+        margin-top:6vh;
+        gap: 25px;
+    }
+    input, input[name="email"]{
+        width:400px;
+        font-size: 30px;
+        
+        
+    }
+    .footer{
+        position: fixed;
+        bottom:0;
+        right:0;
+        left:0;
+        font-size: 3rem;
+    }
+    .odin{
+        height:3rem;
+    }
+    
+        }
